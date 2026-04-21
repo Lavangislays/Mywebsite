@@ -115,6 +115,20 @@ body {
     z-index:4;
     pointer-events: none; 
 }
+
+/* NEW PAGE */
+#infoPage{
+    display:none;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:black;
+    color:white;
+    z-index:10;
+    padding:40px;
+}
 </style>
 </head>
 
@@ -137,28 +151,3 @@ body {
 <div class="lightning" id="lightning"></div>
 
 </div>
-
-<script>
-function enterSite(){
-    document.body.style.transition="1s";
-    document.body.style.opacity="0";
-    setTimeout(()=>{
-        window.location.href="/info.html";
-    },1000);
-}
-
-setInterval(()=>{
-    document.body.style.backgroundColor=Math.random()>0.95?"#200":"black";
-},100);
-
-const lightning=document.getElementById("lightning");
-setInterval(()=>{
-    if(Math.random()>0.97){
-        lightning.style.background="rgba(255,255,255,0.3)";
-        setTimeout(()=>{lightning.style.background="rgba(255,255,255,0)";},100);
-    }
-},300);
-</script>
-
-</body>
-</html>
